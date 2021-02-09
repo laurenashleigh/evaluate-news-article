@@ -24,3 +24,22 @@ const port = 8080;
 
 // Setup Server
 const server = app.listen(port, () => {console.log('running on localhost: ', port)});
+
+//GET route
+app.get('/all', (request, response) => {
+    response.send(projectData);
+    console.log('project data get', projectData)
+});
+
+//POST route
+app.post('/add', (request, response) => {
+    let data = request.body;
+    newEntry = {
+        temperature: data.temperature,
+        date: data.date,
+        userResponse: data.userResponse
+    }
+    Object.assign(projectData, newEntry);
+    response.send(projectData);
+    console.log('project data post ', projectData)
+})
