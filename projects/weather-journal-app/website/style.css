@@ -1,6 +1,6 @@
 body{
     background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #app{
@@ -13,7 +13,7 @@ body{
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px;
 }
 
@@ -41,13 +41,6 @@ input{
     border: none;
 }
 
-input:-internal-autofill-selected {
-    appearance: menulist-button;
-    background-color: rgb(232, 240, 254) !important;
-    background-image: none !important;
-    color: -internal-light-dark(black, white) !important;
-}
-
 button{
     width: 150px;
     height: 60px;
@@ -61,6 +54,7 @@ button{
 }
 h1{
     font-size: 36px;
+    text-decoration: underline;
 }
 
 textarea{
@@ -75,6 +69,7 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+    border: none;
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
