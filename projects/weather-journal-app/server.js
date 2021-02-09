@@ -28,18 +28,16 @@ const server = app.listen(port, () => {console.log('running on localhost: ', por
 //GET route
 app.get('/all', (request, response) => {
     response.send(projectData);
-    console.log('project data get', projectData)
 });
 
 //POST route
 app.post('/add', (request, response) => {
     let data = request.body;
-    newEntry = {
+    projectData = {
+        weather: data.weather,
         temperature: data.temperature,
         date: data.date,
-        userResponse: data.userResponse
+        userResponse: data.userResponse,
     }
-    Object.assign(projectData, newEntry);
     response.send(projectData);
-    console.log('project data post ', projectData)
 })
