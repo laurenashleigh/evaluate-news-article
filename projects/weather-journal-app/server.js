@@ -38,6 +38,7 @@ app.post('/add', (request, response) => {
         temperature: data.temperature,
         date: data.date,
         userResponse: data.userResponse,
+        name: data.name
     }
     response.send(projectData);
 })

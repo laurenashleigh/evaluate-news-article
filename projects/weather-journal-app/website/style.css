@@ -17,36 +17,11 @@ body{
     padding: 20px;
 }
 
-.holder{
-
-}
-
 .entry{
     background: rgba(59, 74, 107, .4);
     border: 2px solid #f0d43a;
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
-.title{
-
+    color: #fffff8;
+    padding: 20px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -60,10 +35,17 @@ input{
     height: 60px;
     width: 320px;
     background:#37abb4;
-    color: #d49e4a;
+    color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
+}
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color: rgb(232, 240, 254) !important;
+    background-image: none !important;
+    color: -internal-light-dark(black, white) !important;
 }
 
 button{
@@ -83,7 +65,7 @@ h1{
 
 textarea{
     background:#37abb4;
-    color: #585252;
+    color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }

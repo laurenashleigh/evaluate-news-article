@@ -22,11 +22,13 @@ const getZipCode = async (baseUrl, zipCode, apiKey) => {
 //Event listener to get weather data then post data to app then update the UI
 const postToApp = (e) => {
     console.log('button clicked');
-    const newZipCode = document.getElementById('zip').value;
-    const newUserResponse = document.getElementById('feelings').value;
+    let newZipCode = document.getElementById('zip').value;
+    let newUserResponse = document.getElementById('feelings').value;
+    let userName = document.getElementById('name').value;
     getZipCode(baseUrl, newZipCode, apiKey)
     .then((data) => {
-        postData(`/add`, {weather: data.weather[0].description, temperature: data.main.temp, date: newDate, userResponse: newUserResponse})
+        console.log(userName);
+        postData(`/add`, {weather: data.weather[0].description, temperature: data.main.temp, date: newDate, userResponse: newUserResponse, name: userName})
     })
     .then(() => {
         updateUI();
@@ -68,10 +70,10 @@ const updateUI = async () => {
     const request = await fetch('/all');
     try {
         const allData = await request.json();
-        document.getElementById('weather').innerHTML = `${allData.weather}`;
-        document.getElementById('temp').innerHTML = `${allData.temperature}`;
-        document.getElementById('date').innerHTML = `${allData.date}`;
-        document.getElementById('content').innerHTML = `${allData.userResponse}`;
+        console.log('all data', allData);
+        document.getElementById('weather').innerHTML = `It was ${allData.temperature} degrees and ${allData.weather}`;
+        document.getElementById('date').innerHTML = `On ${allData.date}`;
+        document.getElementById('content').innerHTML = `${allData.name} was feeling ${allData.userResponse}`;
     } catch(error) {
         console.log('error', error)
     }
