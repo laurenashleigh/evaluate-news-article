@@ -7,7 +7,7 @@
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
-    "build": "webpack"
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "keywords": [],
   "author": "",
@@ -19,11 +19,17 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.2",
+    "eslint": "^7.19.0",
     "html-webpack-plugin": "^3.2.0",
-    "webpack-dev-server": "^3.7.2"
+    "lint": "^0.7.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
