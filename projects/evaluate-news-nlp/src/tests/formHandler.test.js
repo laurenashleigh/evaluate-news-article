@@ -32,7 +32,7 @@ describe('Test for handleSubmit function', () => {
             subjectivity: "SUBJECTIVE",
             irony: "NONIRONIC"
         }))
-        fetch("https://www.bbc.co.uk/news/uk-56065986")
+        fetchMock("https://www.bbc.co.uk/news/uk-56065986")
         .then((res) => res.json())
         .then((data) => {
             expect(data).toEqual({
