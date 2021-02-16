@@ -40,5 +40,11 @@
     "webpack-dev-server": "^3.11.2",
     "whatwg-fetch": "^3.5.0",
     "workbox-webpack-plugin": "^6.1.0"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
   }
 }
