@@ -25,12 +25,11 @@
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter news article URL">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input type="submit" name="" id="submit-btn" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             <section>
-
-            <section>
-                <strong>Form Results:</strong>
+            <section class="results">
+                <strong class="results-title">Form Results:</strong>
                 <div id="results"></div>
                 <div id="confidence"></div>
                 <div id="positivity"></div>
@@ -42,6 +41,14 @@
         <footer>
             <p>This is a footer</p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>

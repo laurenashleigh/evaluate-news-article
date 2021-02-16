@@ -2,6 +2,8 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+    box-shadow: #838181 5px 5px;
+    background-color: #027a93;
 }
 
 input {
@@ -9,4 +11,33 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    border: 1px solid #545454;
+}
+
+#submit-btn {
+    box-shadow: 1px 1px #838181;
+    background-color: #545454;
+    color: white;
+    font-size: large;
+}
+
+.results {
+    border: 1px solid #545454;
+    min-height: 30vh;
+    color: white;
+    background-color: #545454;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    div + div {
+        margin-top: 20px;
+    }
+    
+}
+
+.results-title {
+    align-self: center;
+    text-decoration: underline;
+    font-size: larger;
 }
