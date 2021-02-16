@@ -35,6 +35,6 @@ module.exports = {
         new WorkboxPlugin.GenerateSW()
     ],
     optimization: {
-        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+        minimizer: [new OptimizeCSSAssetsPlugin({})],
         },
 }
